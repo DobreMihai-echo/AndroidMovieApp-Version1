@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorrimaryDark"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/activity_main_popular_movies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textAllCaps="true"
+            android:text="@string/popular_films_and_movies"
+            android:textColor="@color/silver"
+            android:layout_below="@+id/activity_main_tab_layout_view_pager"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bestAndPopular"
+            android:layout_below="@+id/activity_main_popular_movies"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+        <TextView
+            android:id="@+id/activity_main_new_movies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textAllCaps="true"
+            android:text="@string/new_movies_text_view"
+            android:textColor="@color/silver"
+            android:layout_below="@+id/bestAndPopular"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activity_main_new_movies_recycler_view"
+            android:layout_below="@+id/activity_main_new_movies"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/activity_main_tab_layout"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabTextColor="@color/myWhite"
+            android:background="@color/colorrimaryDark">
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/activity_main_tab_layout_view_pager"
+            android:layout_below="@+id/activity_main_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"/>
+    </RelativeLayout>
+
+</ScrollView>

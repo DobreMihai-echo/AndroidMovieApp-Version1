@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovieDetailsActivity"
+    android:orientation="horizontal"
+    android:background="@color/cardview_dark_background">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+            android:id="@+id/movie_details_trailer_for_movie"
+            android:layout_width="match_parent"
+            android:layout_height="245dp"/>
+        <ImageView
+            android:id="@+id/movie_details_image_for_movie"
+            android:layout_width="125dp"
+            android:layout_height="175dp"
+            android:scaleType="centerCrop"
+            android:background="@color/teal_200"
+            android:layout_marginTop="170dp"
+            android:layout_marginStart="20dp"/>
+        <TextView
+            android:id="@+id/movie_details_title_of_movie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/movie_details_image_for_movie"
+            android:layout_below="@+id/movie_details_trailer_for_movie"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/myWhite"
+            android:layout_marginStart="150dp"
+            android:text="Title of Movie"
+            />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/liniarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_below="@id/movie_details_trailer_for_movie"/>
+        <TextView
+            android:id="@+id/movie_details_description_for_movie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/liniarLayout"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="LOREM IPSUM EST UN dolorem est dos mios esteLOREM IPSUM EST UN dolorem est dos mios este"/>
+        <TextView
+            android:id="@+id/text_view_cast"
+            android:layout_below="@id/movie_details_description_for_movie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:padding="16dp"
+            android:text="Cast"
+            android:textColor="@color/myWhite"
+            android:background="@color/silver"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/movie_details_cast_recycleriew"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@+id/text_view_cast"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"/>
+
+    </RelativeLayout>
+
+</ScrollView>
